@@ -39,7 +39,7 @@ async function sign_up() {
         sign_up_info.value = "Succeed signing up.";
         router.push({ path: `/user/${username.value}` });
     } else {
-        sign_up_info.value = "Faild signing up, user exists.";
+        sign_up_info.value = "Failed signing up, user exists.";
     }
 }
 </script>

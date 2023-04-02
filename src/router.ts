@@ -6,6 +6,7 @@ import User from "./components/User.vue";
 const routes = [
     { path: '/', name: "Welcome", component: Welcome },
     { path: '/sign_up/:name', name: "SignUp", component: SignUp, props: true },
+    { path: '/sign_up', name: "SignUp", component: SignUp },
     { path: '/user/:name', name: "User", component: User, props: true },
 ]
 

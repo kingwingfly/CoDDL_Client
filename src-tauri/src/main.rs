@@ -7,8 +7,6 @@
 use co_ddl::{async_sign_in, async_sign_up};
 use tauri::async_runtime::block_on;
 
-// const ADDR: &str = "[2001:da8:c800:b20c:77ca:7dd0:6e36:168d]:8848";
-
 #[tauri::command]
 fn sign_in(username: &str, password: &str) -> bool {
     block_on(async_sign_in(username, password))
