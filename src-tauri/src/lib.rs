@@ -6,8 +6,9 @@ use sign::sign_client::SignClient;
 use sign::LoginReq;
 use sign::SignUpReq;
 
-// const ADDR: &str = "[2001:da8:c800:b20c:77ca:7dd0:6e36:168d]:8848";
-const ADDR: &str = "http://localhost:8848";
+const ADDR: &str = "http://[2001:da8:c800:b20c:77ca:7dd0:6e36:168d]:8848";
+// const ADDR: &str = "http://localhost:8848";
+// const ADDR: &str = "http://192.168.137.1:8848";
 
 async fn create_sign_client() -> Option<SignClient<tonic::transport::Channel>> {
     let endpoint = tonic::transport::Endpoint::new(ADDR)
