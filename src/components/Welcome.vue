@@ -29,7 +29,7 @@ async function sign_up() {
 }
 
 async function get_addr() {
-  address.value = await invoke("sever_address");
+  address.value = await invoke("server_address");
 }
 get_addr()
 

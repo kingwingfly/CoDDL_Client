@@ -12,13 +12,13 @@ rust-version = "1.68"
 
 [build-dependencies]
 tauri-build = { version = "1.1", features = [] }
-tonic-build = "0.8"
+tonic-build = "0.9"
 
 [dependencies]
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
 tauri = { version = "1.1", features = ["api-all"] }
-tonic = "0.8"
+tonic = "0.9"
 tokio = { version = "1", features = ["full"] }
 futures = "0.3"
 prost = "0.11.0"

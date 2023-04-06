@@ -17,13 +17,13 @@ fn sign_up(username: &str, password: &str, email: &str) -> bool {
 }
 
 #[tauri::command]
-fn sever_address() -> String {
+fn server_address() -> String {
     co_ddl::ADDR.to_string()
 }
 
 fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![sign_in, sign_up, sever_address])
+        .invoke_handler(tauri::generate_handler![sign_in, sign_up, server_address])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
