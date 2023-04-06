@@ -7,6 +7,7 @@ const username = ref("");
 const password = ref("");
 const verify_result = ref("");
 const router = useRouter();
+const address = ref("");
 
 async function sign_in() {
   let verify_res = false;
@@ -27,6 +28,10 @@ async function sign_up() {
   router.push({ path: `/sign_up/${username.value}` })
 }
 
+async function get_addr() {
+  address.value = await invoke("sever_address");
+}
+get_addr()
 
 </script>
 
@@ -42,5 +47,5 @@ async function sign_up() {
   </div>
 
   <p>{{ verify_result }}</p>
-  <p></p>
+  <p>The sever address is {{ address }}</p>
 </template>

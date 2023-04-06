@@ -16,9 +16,14 @@ fn sign_up(username: &str, password: &str, email: &str) -> bool {
     block_on(async_sign_up(username, password, email))
 }
 
+#[tauri::command]
+fn sever_address() -> String {
+    co_ddl::ADDR.to_string()
+}
+
 fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![sign_in, sign_up])
+        .invoke_handler(tauri::generate_handler![sign_in, sign_up, sever_address])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
